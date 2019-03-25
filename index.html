@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+    <link rel="manifest" href="./manifest.json">
+    <title>
+        PWA_Test
+    </title>
+</head>
+
+<body style="margin: 0px">
+    <script>
+        // service workerの登録関係
+        window.addEventListener('load', function () {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("./service_worker.js")
+                    .then(function (registration) {
+                        console.log("serviceWorker registed.");
+                    }).catch(function (error) {
+                        console.warn("serviceWorker error.", error);
+                    });
+            }
+        });
+    </script>
+    PWA_Test
+</body>
+
+</html>
