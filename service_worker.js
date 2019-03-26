@@ -4,7 +4,7 @@
 // キャッシュ名とキャッシュファイルの指定
 const CACHE_NAME = 'pwa-sample-caches';
 const urlsToCache = [
-    '/dcskimura.github.io/pwa/'
+    '/dcskimura.github.io/'
 ];
 
 // インストールイベント
